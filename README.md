@@ -32,7 +32,7 @@ The GitHub Action deploys `main` via `rsync`. This is configured via the followi
 ## Best practices
 
 * Posts live in the `_posts` directory and can be accessed via `site.posts`.
-* Safely link to an post via `post_url`, referencing its date + title: `[My post]({% post_url 2024-01-01-my-post %})`
+* Safely link to an post via `post_url`, referencing its date + title: `[My post]()`
 * Safely link to non-post pages via `link`, referencing the path, filename, and extension: `[Documentation]({% link _pages/documentation.liquid %})`
 * Images for each posts live in their own directory, like so: `assets/images/my-post/`.
 

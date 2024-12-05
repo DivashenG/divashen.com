@@ -50,4 +50,4 @@ Question about the workshop? [Send me an email](mailto:joe@masilotti.com).
 
 ## Prerequisites
 
-You need to run Ruby on Rails and Xcode, clone git repos, and know very basic Swift. Brush up on [Swift for Ruby developers]({% post_url 2023-04-25-swift-for-ruby-developers %}) if needed.
+You need to run Ruby on Rails and Xcode, clone git repos, and know very basic Swift. Brush up on [Swift for Ruby developers]() if needed.
