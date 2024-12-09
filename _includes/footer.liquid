@@ -11,7 +11,7 @@
           <div class="flex gap-6 text-sm font-medium text-gray-800">
             {% comment %}
             {% for link in site.data.navigation_links %}
-              <a href="{% link {{ link.href }} %}" class="transition hover:text-primary-600">{{ link.title }}</a>
+              <a href="{{ link.href }}" class="transition hover:text-primary-600">{{ link.title }}</a>
             {% endfor %}
             {% endcomment %}
           </div>
