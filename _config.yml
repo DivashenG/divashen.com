@@ -61,8 +61,3 @@ plugins:
   - jekyll-inline-svg
 postcss:
   cache: false
-
-# Custom configuration
-fathom: QNURQQHD
-preview_links:
-  site_id: 755
