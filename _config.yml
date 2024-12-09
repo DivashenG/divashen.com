@@ -1,5 +1,9 @@
+# Github Pages Config
+domain: divashen.github.io
+url: https://divashen.github.io
+baseurl: /divashen.com/
+
 # Jekyll configuration
-url: https://divashen.com
 title: divashen.com
 description:
 author:
@@ -16,6 +20,11 @@ exclude:
   - postcss.config.js
   - tailwind.config.js
   - yarn.lock
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
 
 # Page configuration
 permalink: /:title/
@@ -55,6 +64,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-inline-svg
+
 postcss:
   cache: false
 

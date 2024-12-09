@@ -1,14 +1,14 @@
 - title: About
-  href: _pages/about.liquid
+  href: /about
 
 - title: Articles
-  href: _pages/articles.liquid
+  href: /articles
 
 - title: Newsletter
-  href: _pages/newsletter.liquid
+  href: /newsletter
 
 - title: \_(ツ)_/
-  href: _pages/index.liquid
+  href: /
 
 #- title: Book
 #  href: _pages/book.liquid
