@@ -7,6 +7,7 @@ on:
   schedule:
     # Redeploy site at 9:00 UTC every day.
     - cron: "0 9 * * *"
+  workflow_dispatch:
 
 jobs:
   deploy:
