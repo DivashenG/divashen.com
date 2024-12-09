@@ -1,5 +1,9 @@
+# Github Pages Config
+domain: divashen.github.io
+url: https://divashen.github.io
+baseurl: /
+
 # Jekyll configuration
-url: https://divashen.com
 title: divashen.com
 description:
 author:
