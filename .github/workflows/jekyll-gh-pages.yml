@@ -37,7 +37,10 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Uses the default token provided by GitHub Actions
-          publish_dir: ./_site  # Directory where the built Jekyll site is located
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@github.com"
+          git remote set-url origin https://github.com/${{ github.repository }}
+          git add -A
+          git commit -m "Deploy Jekyll site"
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }} gh-pages
