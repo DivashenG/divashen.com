@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-full antialiased">
+  <head>
+    
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="og:locale" content="en_US">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>⚡️ Hotwire dev newsletter - May 2023 | divashen.com</title>
+
+<meta name="description" content="Rails World CFP announcement, how to write your own Rails generators, and FIVE articles on Turbo Native this month.">
+<meta name="canonical" href="https://divashen.com/hotwire/edition-25/">
+<meta name="author" content="Divashen Govender">
+
+<meta name="og:title" content="⚡️ Hotwire dev newsletter - May 2023 | divashen.com">
+<meta name="og:description" content="Rails World CFP announcement, how to write your own Rails generators, and FIVE articles on Turbo Native this month.">
+<meta name="og:image" content="https://divashen.com/assets/images/og/hotwire/25.png">
+<meta name="og:url" content="https://divashen.com/hotwire/edition-25/">
+<meta name="og:site_name" content="divashen.com">
+
+<meta name="twitter:creator" content="@divasheng">
+<meta name="twitter:site" content="@divasheng">
+<meta name="twitter:title" content="⚡️ Hotwire dev newsletter - May 2023 | divashen.com">
+<meta name="twitter:image" content="https://divashen.com/assets/images/og/hotwire/25.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="/assets/favicons/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/favicons/192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicons/180x180.png" sizes="180x180">
+
+<link type="application/atom+xml" rel="alternate" href="https://divashen.com/feed.xml" title="divashen.com" />
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
+    <script src="/assets/javascripts/toggler.js"></script>
+    
+      <script src="https://cdn.usefathom.com/script.js" data-site="QNURQQHD" defer></script>
+    
+  </head>
+  <body class="flex h-full bg-gray-50">
+    <div class="flex w-full">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-gray-100"></div>
+        </div>
+      </div>
+      <div class="relative flex w-full flex-col">
+        <header class="pointer-events-none relative z-50 flex flex-col">
+  
+
+
+
+  <div class="top-0 z-10 h-16 pt-6">
+    <div class="sm:px-8">
+      <div class="max-w-7xl mx-auto lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="max-w-2xl mx-auto lg:max-w-5xl">
+            <div class="relative flex gap-4 justify-center">
+              <div class="flex flex-1">
+                
+                  <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    <a href="/" aria-label="divashen.com" title="divashen.com" class="block pointer-events-auto">
+                      <img src="/assets/images/astro.jpg" alt="Divashen Govender" class="rounded-full bg-gray-100 object-cover h-9 w-9">
+                    </a>
+                  </div>
+                
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <div class="pointer-events-auto md:hidden">
+  <button type="button" id="menu-close-button" class="group flex items-center rounded-full bg-white/90 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="ml-3 h-auto w-3 stroke-gray-500 group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+</svg>
+  </button>
+  <div id="menu-content" class="hidden fixed inset-0 z-50 bg-gray-800/40 backdrop-blur-sm">
+    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-gray-900/5">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button type="button" id="menu-open-button" aria-label="Close menu" class="-m-1 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6 text-gray-500">
+  <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"/>
+</svg>
+        </button>
+        <h2 class="text-sm font-medium text-gray-600">
+          Navigation
+        </h2>
+      </div>
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-gray-100 text-base text-gray-800">
+          
+            <li>
+              <a href="/about/" class="block py-2">About</a>
+            </li>
+          
+            <li>
+              <a href="/articles/" class="block py-2">Articles</a>
+            </li>
+          
+            <li>
+              <a href="/newsletter/" class="block py-2">Newsletter</a>
+            </li>
+          
+            <li>
+              <a href="/" class="block py-2">\_(ツ)_/</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+                <nav class="pointer-events-auto hidden md:block">
+  <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    
+      
+      
+      <li>
+        <a href="/about/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          About
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/articles/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Articles
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/newsletter/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Newsletter
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          \_(ツ)_/
+          
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+              </div>
+              <div class="flex justify-end md:flex-1">
+                <div class="pointer-events-auto">
+                  <a href="https://wavesandcode.substack.com/feed" title="RSS" aria-label="RSS" class="block group rounded-full bg-white/90 px-3.5 py-2.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="flex-auto">
+          <div class="mt-16 sm:px-8 sm:mt-32">
+  <div class="max-w-7xl mx-auto lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="max-w-2xl mx-auto lg:max-w-5xl">
+        <div class="xl:relative">
+  <div class="mx-auto max-w-2xl">
+    <a href="/newsletter/" title="Go back to all editions" aria-label="Go back to all editions" class="hidden group mb-8 lg:flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 stroke-gray-500 transition group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+</svg>
+    </a>
+    <article>
+      <header class="flex flex-col">
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+          ⚡️ Hotwire Monthly
+          <span class="sr-only">- May 2023 edition</span>
+        </h1>
+        <time datetime="<%= resource.data.date %>" class="order-first flex items-center text-base text-gray-500">
+          <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+          <span class="ml-3">May 2023 edition</span>
+        </time>
+      </header>
+      <p class="mt-2 sm:mt-4 sm:text-lg text-gray-600">Turbo Native, Hotwire, and Ruby on Rails - weekly editions with monthly link roundups. Subscribe for exclusive content and first access to upcoming products. By <a href="/" class="underline">Joe Masilotti</a>.</p>
+      
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      <div class="prose lg:prose-lg prose-h2:mb-8 prose-h3:mb-2 mt-8">
+        <p>Welcome back to the ⚡️ Hotwire dev newsletter!</p>
+
+<p>I’ve been pretty busy since last month. I ran another Turbo Native workshop, took a few longboarding lessons, and got into not one, but <em>two</em>, trading card games. 😆</p>
+
+<p>But I’m excited to dive back into more Turbo Native work. I’m working with two very different clients right now. I’m building an app from scratch for one and integrating new HealthKit APIs for the other. It’s invigorating to work in such different spaces at the same time.</p>
+
+<p>Speaking of new and exciting, I recently started a second newsletter. It’s a <a href="/newsletter/">weekly email focusing on Turbo Native and me being a solopreneur</a>. That is where I’ll be posting the more personal updates in the future. But don’t worry, <em>this</em> newsletter isn’t going anywhere!</p>
+
+<p>So let’s dive into this month’s links. Highlights include the Rails World CFP announcement, how to write your own Rails generator, and <em>five</em> articles on Turbo Native - even Android gets some love this month.</p>
+
+<h2 id="-announcements">📣  Announcements</h2>
+
+<h3 id="rails-world-call-for-papers-now-open"><a href="https://rubyonrails.org/2023/5/9/rails-world-call-for-papers-now-open">Rails World Call for Papers now open</a></h3>
+
+<p>Rails World is the first conference hosted by the Rails Foundation, taking place in Amsterdam on October 5 and 6. And the CFP is officially open! You have until June 16 to submit your talk or workshop.</p>
+
+<p>And you bet I’m submitting something about Turbo Native. So tell me, dear reader, what specific topic would you like learn about? 🤔</p>
+
+<h2 id="--articles-and-videocasts">📰  Articles and videocasts</h2>
+
+<h3 id="welcome-to-rails-cheat-sheet"><a href="https://fly.io/ruby-dispatch/welcome-to-rails-cheat-sheet/">Welcome to Rails Cheat Sheet</a></h3>
+
+<p>by Brad Gessler <a href="https://twitter.com/bradgessler">@bradgessler</a></p>
+
+<p>The Fly.io blog has been hot recently!</p>
+
+<p>This time, Brad shares a high-level overview of where Rails is today. There are useful links for how to get started, some sane defaults for new projects, and where to go to learn more.</p>
+
+<h3 id="once-a-maintainer-marco-roth"><a href="https://onceamaintainer.substack.com/p/once-a-maintainer-marco-roth">Once a Maintainer: Marco Roth</a></h3>
+
+<p>by Allison Pike <a href="https://twitter.com/infieldai">@infieldai</a></p>
+
+<p>Marco shares his story on getting started with coding, Ruby, and open source in this week’s Once a Maintainer interview. He also touches on some practical tips for how to get more folks involved in open source. A great developer origin story for a member of the StimulusReflex core team.</p>
+
+<h3 id="supechat-1-amanda-perino-from-rails-foundation-about-rails-world"><a href="https://www.youtube.com/watch?v=AlcfyfBSM2A">SupeChat #1 Amanda Perino from Rails Foundation about Rails World</a></h3>
+
+<p>by Yaroslav Shmarov <a href="https://twitter.com/yarotheslav">@yarotheslav</a></p>
+
+<p>SupeRails premiers the first SupeChat episode with Amanda Perino, the executive director of the Rails Foundation. Amanda reveals some more details on the upcoming Rails World conference and what to expect next from the Rails Foundation.</p>
+
+<p>Also, 850+ people are already on the <a href="https://ti.to/rails-world/rails-world-2023">wait list for tickets</a>! 🤯</p>
+
+<h2 id="--tutorials">👩‍🏫  Tutorials</h2>
+
+<h3 id="build-a-memory-game-with-rails-stimulus-js-and-tailwind-css"><a href="https://semaphoreci.com/blog/memory-game-rails-stimulusjs-tailwindcss">Build a Memory Game with Rails, Stimulus JS, and Tailwind CSS</a></h3>
+
+<p>by Marvin Kang <a href="https://twitter.com/kang_marvin">@kang_marvin</a></p>
+
+<p>Fair warning, there is a lot of JavaScript in this tutorial.</p>
+
+<p>Marvin walks through how to build a tile-matching game with Stimulus powered by a little Rails code to hold it all together. The most important takeaway I had from this is the clever use of <a href="https://stimulus.hotwired.dev/reference/outlets">Outlets</a> to split up code among multiple controllers.</p>
+
+<h3 id="how-to-create-custom-flash-types-in-rails"><a href="https://www.akshaykhot.com/create-custom-flash-types-rails/">How to Create Custom Flash Types in Rails</a></h3>
+
+<p>by Akshay Khot</p>
+
+<p>Did you know you can add custom flash types in Rails? Me neither!</p>
+
+<p>Akshay walks us through how to use the API to create a “warning” flash and pass it directly to the redirect helper: <code class="language-plaintext highlighter-rouge">redirect_to root_path, warning: "Incomplete profiles"</code>. Read to the end to see <em>how</em> it is implemented under the hood in the Rails source code.</p>
+
+<h3 id="turbo-frame-pages-in-ruby-on-rails-7"><a href="https://www.youtube.com/watch?v=iwZDoz_Ya2k">Turbo Frame Pages in Ruby on Rails 7</a></h3>
+
+<p>by Deanin <a href="https://twitter.com/Deaniocom">@Deaniocom</a></p>
+
+<p>Anyone remember <code class="language-plaintext highlighter-rouge">.js.erb</code> files?</p>
+
+<p>If you’re all in on Hotwire then you probably haven’t written one of those in a while. But we can apply the same concept to Turbo Streams. Deanin walks us through extracting some code into <code class="language-plaintext highlighter-rouge">.turbo_stream.erb</code> files to clean things up a bit and remove a little duplication.</p>
+
+<h3 id="creating-custom-railsgenerators"><a href="https://garrettdimon.com/journal/posts/creating-custom-rails-generators">Creating Custom Rails Generators</a></h3>
+
+<p>by Garrett Dimon <a href="https://twitter.com/garrettdimon">@garrettdimon</a></p>
+
+<p>Ever run <code class="language-plaintext highlighter-rouge">bin/rails generate</code> or <code class="language-plaintext highlighter-rouge">bin/rails g</code> and wished the generated code was a little more <em>your</em> style? Join Garrett as he dives into Rails generators; learn how to customize the builtin ones and how to create your own.</p>
+
+<p>Maybe I’ll finally get around to creating <code class="language-plaintext highlighter-rouge">bin/rails g turbo_native</code> now!</p>
+
+<h3 id="conditionally-style-elements-in-turbo-frames-with-tailwind-css"><a href="https://dev.to/spinal/conditionally-style-elements-in-turbo-frames-with-tailwind-css-1d74">Conditionally style elements in Turbo Frames with Tailwind CSS</a></h3>
+
+<p>by Spinal CMS <a href="https://twitter.com/SpinalCms">@SpinalCms</a></p>
+
+<p>A quick tutorial on how to add custom styling to elements when they are displayed in a Turbo Frame.</p>
+
+<p>I love that how this approach uses a custom Tailwind CSS variant to target elements conditionally. For example, adding the <code class="language-plaintext highlighter-rouge">turbo-frame:hidden</code> class will hide the element when it is rendered in a Turbo Frame!</p>
+
+<h2 id="-turbo-native">📱 Turbo Native</h2>
+
+<h3 id="how-to-get-up-and-running-with-turbo-android---part-1"><a href="https://williamkennedy.ninja/android/2023/05/10/up-and-running-with-turbo-android-part-1/">How to Get Up and Running With Turbo Android - Part 1</a></h3>
+
+<p>by William Kennedy <a href="https://twitter.com/_williamkennedy">@williamkennedy</a></p>
+
+<blockquote>
+  <p>There are too few resources on getting up and running with Turbo Android. This post aims to rectify that.</p>
+</blockquote>
+
+<p>Thank you William! Learn how to build the basic scaffolding of a Turbo Native Android app from scratch. I don’t know much Kotlin but was still able to follow along thanks to multiple screenshots of the Android Studio IDE.</p>
+
+<h3 id="how-to-get-up-and-running-with-turbo-android-part-2---feel-more-native"><a href="https://williamkennedy.ninja/android/2023/05/19/turbo-android-part-2-feel-more-native/">How to Get up and Running with Turbo Android Part 2 - Feel More Native</a></h3>
+
+<p>by William Kennedy <a href="https://twitter.com/_williamkennedy">@williamkennedy</a></p>
+
+<p>Part 2 dives into adding a native screen powered by Jetpack Compose, Google’s modern UI tool, often compared to SwiftUI. I love that you can register fragments (screens) directly via turbo-android. I’d love if we could do the same for turbo-ios. 🤔</p>
+
+<h3 id="how-to-get-up-and-running-with-turbo-android-part-3---how-to-access-native-android-features-with-the-javascript-bridge"><a href="https://williamkennedy.ninja/business/2023/05/23/turbo-android-part-3-how-to-access-native-android-features-with-the-javascript-bridge/">How to Get Up and Running With Turbo Android Part 3 - How to Access Native Android Features with the JavaScript Bridge</a></h3>
+
+<p>by William Kennedy <a href="https://twitter.com/_williamkennedy">@williamkennedy</a></p>
+
+<p>Finally, part 3 follows up with how to call native Kotlin code from your web app. It uses the JavaScript bridge to read the user’s contact book and display everyone’s name in a web view. A great example of how Turbo Native can seamlessly bridge the hybrid gap.</p>
+
+<h3 id="enhancing-turbo-native-apps-how-to-hide-web-rendered-content"><a href="">Enhancing Turbo Native apps: How to hide web-rendered content</a></h3>
+
+<p>by Joe Masilotti <a href="https://twitter.com/joemasilotti">@joemasilotti</a></p>
+
+<p>Sometimes shoving a web view in native chrome can look a little… off.</p>
+
+<p>Here’s how I hide web-rendered content in Turbo Native apps to make them feel a little more native. All from the comfort of Ruby and HTML.</p>
+
+<h3 id="a-rails-like-endpoint-switcher-for-ios-apps"><a href="">A Rails-like endpoint switcher for iOS apps</a></h3>
+
+<p>by Joe Masilotti <a href="https://twitter.com/joemasilotti">@joemasilotti</a></p>
+
+<p>iOS doesn’t have a <code class="language-plaintext highlighter-rouge">Rails.env.development?</code> equivalent - so let’s build one! This tutorial outlines how to make your iOS apps a little more <em>Railsy</em>. And can even be applied outside of Turbo Native.</p>
+
+      </div>
+      <div class="flex justify-start items-center mt-16">
+        <img src="/assets/images/joe.jpg" class="rounded-full h-24 w-24 sm:h-32 sm:w-32">
+        <div class="flex flex-col -space-y-0.5 text-sm sm:text-base text-gray-600 ml-6">
+          <div>Thanks,</div>
+          <div>Joe Masilotti</div>
+          <a href="https://twitter.com/joemasilotti" class="font-semibold underline">@joemasilotti</a>
+          <a href="mailto:joe@masilotti.com" class="font-semibold underline">joe@masilotti.com</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        </main>
+        <footer class="mt-32 sm:px-8">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    
+      <div class="border-t border-gray-100">
+        
+
+
+
+
+
+  <div class="relative px-4 sm:px-8 lg:px-12 py-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="lg:flex lg:items-center lg:justify-between lg:space-x-4">
+        <div>
+          <h3 class="flex items-center text-base font-medium text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-none text-gray-500">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+</svg>
+            <span class="ml-3">Get my newsletter</span>
+          </h3>
+          <p class="mt-2 text-base text-gray-600 max-w-xl pr-4">Where I share my professional experiences as a Software Engineer; my athletic adventures surfer/snowboarder and my creative exploration into leathercraft...</p>
+        </div>
+        
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+    
+    <div class="relative px-4 sm:px-8 lg:px-12 border-t border-gray-100 pt-10 pb-16">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex gap-6 text-sm font-medium text-gray-800">
+            
+          </div>
+          <p class="text-sm text-gray-500">&copy; 2024 Divashen Govender. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

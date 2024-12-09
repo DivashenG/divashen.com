@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-full antialiased">
+  <head>
+    
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="og:locale" content="en_US">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>⚡️ Hotwire dev newsletter - November 2022 | divashen.com</title>
+
+<meta name="description" content="The Rails Foundation, an exciting new API was added to Stimulus, vanilla Rails is “plenty”, a new Turbo Native article, and more.">
+<meta name="canonical" href="https://divashen.com/hotwire/edition-19/">
+<meta name="author" content="Divashen Govender">
+
+<meta name="og:title" content="⚡️ Hotwire dev newsletter - November 2022 | divashen.com">
+<meta name="og:description" content="The Rails Foundation, an exciting new API was added to Stimulus, vanilla Rails is “plenty”, a new Turbo Native article, and more.">
+<meta name="og:image" content="https://divashen.com/assets/images/og/hotwire/19.png">
+<meta name="og:url" content="https://divashen.com/hotwire/edition-19/">
+<meta name="og:site_name" content="divashen.com">
+
+<meta name="twitter:creator" content="@divasheng">
+<meta name="twitter:site" content="@divasheng">
+<meta name="twitter:title" content="⚡️ Hotwire dev newsletter - November 2022 | divashen.com">
+<meta name="twitter:image" content="https://divashen.com/assets/images/og/hotwire/19.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="/assets/favicons/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/favicons/192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicons/180x180.png" sizes="180x180">
+
+<link type="application/atom+xml" rel="alternate" href="https://divashen.com/feed.xml" title="divashen.com" />
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
+    <script src="/assets/javascripts/toggler.js"></script>
+    
+      <script src="https://cdn.usefathom.com/script.js" data-site="QNURQQHD" defer></script>
+    
+  </head>
+  <body class="flex h-full bg-gray-50">
+    <div class="flex w-full">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-gray-100"></div>
+        </div>
+      </div>
+      <div class="relative flex w-full flex-col">
+        <header class="pointer-events-none relative z-50 flex flex-col">
+  
+
+
+
+  <div class="top-0 z-10 h-16 pt-6">
+    <div class="sm:px-8">
+      <div class="max-w-7xl mx-auto lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="max-w-2xl mx-auto lg:max-w-5xl">
+            <div class="relative flex gap-4 justify-center">
+              <div class="flex flex-1">
+                
+                  <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    <a href="/" aria-label="divashen.com" title="divashen.com" class="block pointer-events-auto">
+                      <img src="/assets/images/astro.jpg" alt="Divashen Govender" class="rounded-full bg-gray-100 object-cover h-9 w-9">
+                    </a>
+                  </div>
+                
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <div class="pointer-events-auto md:hidden">
+  <button type="button" id="menu-close-button" class="group flex items-center rounded-full bg-white/90 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="ml-3 h-auto w-3 stroke-gray-500 group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+</svg>
+  </button>
+  <div id="menu-content" class="hidden fixed inset-0 z-50 bg-gray-800/40 backdrop-blur-sm">
+    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-gray-900/5">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button type="button" id="menu-open-button" aria-label="Close menu" class="-m-1 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6 text-gray-500">
+  <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"/>
+</svg>
+        </button>
+        <h2 class="text-sm font-medium text-gray-600">
+          Navigation
+        </h2>
+      </div>
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-gray-100 text-base text-gray-800">
+          
+            <li>
+              <a href="/about/" class="block py-2">About</a>
+            </li>
+          
+            <li>
+              <a href="/articles/" class="block py-2">Articles</a>
+            </li>
+          
+            <li>
+              <a href="/newsletter/" class="block py-2">Newsletter</a>
+            </li>
+          
+            <li>
+              <a href="/" class="block py-2">\_(ツ)_/</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+                <nav class="pointer-events-auto hidden md:block">
+  <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    
+      
+      
+      <li>
+        <a href="/about/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          About
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/articles/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Articles
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/newsletter/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Newsletter
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          \_(ツ)_/
+          
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+              </div>
+              <div class="flex justify-end md:flex-1">
+                <div class="pointer-events-auto">
+                  <a href="https://wavesandcode.substack.com/feed" title="RSS" aria-label="RSS" class="block group rounded-full bg-white/90 px-3.5 py-2.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="flex-auto">
+          <div class="mt-16 sm:px-8 sm:mt-32">
+  <div class="max-w-7xl mx-auto lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="max-w-2xl mx-auto lg:max-w-5xl">
+        <div class="xl:relative">
+  <div class="mx-auto max-w-2xl">
+    <a href="/newsletter/" title="Go back to all editions" aria-label="Go back to all editions" class="hidden group mb-8 lg:flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 stroke-gray-500 transition group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+</svg>
+    </a>
+    <article>
+      <header class="flex flex-col">
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+          ⚡️ Hotwire Monthly
+          <span class="sr-only">- November 2022 edition</span>
+        </h1>
+        <time datetime="<%= resource.data.date %>" class="order-first flex items-center text-base text-gray-500">
+          <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+          <span class="ml-3">November 2022 edition</span>
+        </time>
+      </header>
+      <p class="mt-2 sm:mt-4 sm:text-lg text-gray-600">Turbo Native, Hotwire, and Ruby on Rails - weekly editions with monthly link roundups. Subscribe for exclusive content and first access to upcoming products. By <a href="/" class="underline">Joe Masilotti</a>.</p>
+      
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      <div class="prose lg:prose-lg prose-h2:mb-8 prose-h3:mb-2 mt-8">
+        <p>Welcome back to the November edition of the ⚡️ Hotwire dev newsletter!</p>
+
+<p>This month the Rails Foundation was announced, an exciting new API was added to Stimulus, we learn that vanilla Rails is “plenty”, and more. There’s even a Turbo Native article that wasn’t written by me!</p>
+
+<p>Speaking of Turbo Native, I’m putting the finishing touches on the curriculum and content for my first ever Turbo Native workshop. I’m hosting 15 people next month for a 3-hour deep dive into the framework and how to apply it to their Rails apps. If all goes well I will be running this more regularly in the future. <a href="https://masilotti.com/turbo-native-workshop/">Drop your email here</a> to get notified when the second session goes on sale.</p>
+
+<p>In more meta news, this month’s edition includes fewer articles but more editorial notes from me. Do you prefer more of my thoughts or more links? Hit the Reply button and let me know – replies go directly to my personal inbox.</p>
+
+<h2 id="-news">📰 News</h2>
+
+<h3 id="the-rails-foundation-kicks-off-with-one-million-dollars"><a href="https://rubyonrails.org/2022/11/14/the-rails-foundation">The Rails Foundation kicks off with one million dollars</a></h3>
+
+<p>Earlier this month The Rails Foundation was announced. Its mission is to “improve the documentation, education, marketing, and events in our ecosystem to the benefit of all new and existing Rails developers.” The eight founding core members together endowed a whopping $1,000,000 in seed funding to kick it off.</p>
+
+<p>I’m excited to see resources being officially (and publicly!) allocated to where Rails can use the most help: education and marketing. And I’m doubly excited that “new Rails developers” are explicitly called out. But I also worry if we are putting even <em>more</em> responsibility and ownership in a few hands. It’s no secret that the big names in the Rails ecosystem have significant sway in which features make it into the framework.</p>
+
+<h3 id="stimulus-gets-an-outlets-api"><a href="https://github.com/hotwired/stimulus/pull/576">Stimulus gets an Outlets API</a></h3>
+
+<p>by Marco Roth <a href="https://twitter.com/marcoroth_">@marcoroth_</a></p>
+
+<blockquote>
+  <p>The Outlets API lets you reference Stimulus Controller instances and their <em>controller element</em> from within another Stimulus Controller by using CSS selectors. The use of Outlets helps with cross-controller communication and coordination as an alternative to dispatching custom events on controller elements.</p>
+</blockquote>
+
+<p>When I saw <a href="https://twitter.com/marcoroth_/status/1593281738574266369">Marco tweet this</a> I let out an audible “YES!” I’ve used <code class="language-plaintext highlighter-rouge">getControllerForElementAndIdentifier()</code> too many times and it has always felt so hacky. Good riddance! I can’t wait for a new release to get cut so I can start integrating this into my projects.</p>
+
+<h2 id="-articles">📝 Articles</h2>
+
+<h3 id="navigating-rubyconf2022-as-a-newcomer"><a href="https://rubytogether.org/news/2022/11/navigating-rubyconf2022-as-a-newcomer">Navigating RubyConf2022 as a newcomer</a></h3>
+
+<p>RubyConf 2022 is in a few days! This guide summarizes some advice from a few of the Scholars and Guides from recent RailsConf and RubyConf events. It’s a great place to learn what to expect and what to prepare for if this is your first Ruby conference.</p>
+
+<p>My favorite part of conferences is the “hallway track”. Or, everything that <em>isn’t</em> an official talk. It’s meeting people for a coffee during downtime, chatting with someone as you wait for the next talk to begin, or grabbing dinner with a new friend. And if that sounds intimidating then tell a speaker you loved their talk. It’s a low-stakes way to connect with someone, especially because they want to hear from the audience.</p>
+
+<h3 id="vanilla-rails-is-plenty"><a href="https://dev.37signals.com/vanilla-rails-is-plenty">Vanilla Rails is plenty</a></h3>
+
+<p>by Jorge Manrubia <a href="https://twitter.com/jorgemanru">@jorgemanru</a></p>
+
+<p>Brace yourself for this one. It’s not a breezy article. Jorge, a programmer at 37signals, challenges the common critique that Rails encourages a poor separation of concerns. He highlights different examples with big chunks of real code from HEY and Basecamp.</p>
+
+<p>My biggest takeaway is the section on rich domain models. He encourages a broad surface area that covers all of the features and concepts associated with the model. But the actual work is done somewhere else. This creates a public API that covers the stuff it <em>does</em> but the actual implementation is squirreled away somewhere else. He uses a Rails concern plus a PORO in his example.</p>
+
+<h3 id="moving-beyond-not-getting-over-imposter-syndrome"><a href="https://thoughtbot.com/blog/moving-beyond-not-getting-over-imposter-syndrome">Moving Beyond, Not Getting Over, Imposter Syndrome</a></h3>
+
+<p>by Stephanie Minn</p>
+
+<p>This article really resonated with me this month. As I was putting together the curriculum for my workshop I couldn’t help but think: What if no one buys this? What if everyone thinks its crap and requests a refund?</p>
+
+<p>I didn’t share these feelings publicly. At first out of embarrassment. But then out of fear that it would lead to folks thinking the workshop wasn’t worth their time and money. Stephanie says, “I’m tired of feeling bad about feeling bad.” This is a new endeavor for me. It’s scary! And it’s OK to feel nervous or uneasy that it won’t be perfect.</p>
+
+<p>I share my story not for your sympathy. But so the next time a coworker or friend goes through “imposter syndrome” you can empathize with them. You can help them use their emotions as a guide and separate what’s in their control vs. what isn’t. And most importantly, never assume or apply implicit biases. Because you never know the full story.</p>
+
+<h2 id="-tutorials">👩‍🎓 Tutorials</h2>
+
+<h3 id="turbo-native---how-to-access-native-ios-features-with-the-javascript-bridge"><a href="https://williamkennedy.ninja/ios/2022/11/13/turbo-native-how-to-access-native-ios-features-from-rails/">Turbo Native - How to Access Native iOS features with the JavaScript bridge</a></h3>
+
+<p>by William Kennedy <a href="https://twitter.com/_williamkennedy">@_williamkennedy</a></p>
+
+<p>What’s this? Another Turbo Native article on the web? Yes, please!</p>
+
+<p>This article covers one of my favorite parts of Turbo Native: dropping down into Swift and using Apple’s native SDKs. The example covers sharing data from the Contacts app via JavaScript messages.</p>
+
+<p><a href="">The JavaScript bridge</a> enables communication between the Turbo Native iOS/Android apps and Rails apps outside of the request cycle. This enables all sorts of unique experiences because you get full access to the underlying SDKs. If you can write it in Swift then you can expose it to your Rails app!</p>
+
+<h3 id="build-a-table-editor-with-trix-and-turbo-frames-in-rails"><a href="https://blog.appsignal.com/2022/10/26/build-a-table-editor-with-trix-and-turbo-frames-in-rails.html">Build a Table Editor with Trix and Turbo Frames in Rails</a></h3>
+
+<p>by Julian Rubisch <a href="https://twitter.com/julian_rubisch">@julian_rubisch</a></p>
+
+<p>One of the most exciting things about the <a href="https://trix-editor.org">Trix editor</a> is how customizable it is. I’ve always been excited (and intimidated!) to add a custom toolbar button of my own. At my last job we added a few simple formatting options - highlighted text and such. But the implementation only scratched the surface of what Trix has to offer.</p>
+
+<p>Julian takes this to another level by building a table editor directly into Trix. Scroll through the article to view the videos before you give it a read. This is impressive stuff! But there are a few workarounds required to get Trix to pay nicely with Turbo. I encourage you to read the last two paragraphs of the article before you decide to implement this on your own.</p>
+
+<h3 id="an-intro-to-dry-schema-in-ruby"><a href="https://www.honeybadger.io/blog/ruby-dry-schema/">An Intro to dry-schema in Ruby</a></h3>
+
+<p>by Abiodun Olowode <a href="https://twitter.com/AbiodunAjibade3">@AbiodunAjibade3</a></p>
+
+<p>I’ve seen the <a href="https://dry-rb.org"><code class="language-plaintext highlighter-rouge">dry-rb</code></a> gems floating around for a while now but haven’t taken the time to really learn about them. So I’m excited to read up a bit on one part of the family, <code class="language-plaintext highlighter-rouge">dry-schema</code>.</p>
+
+<p>It’s like <code class="language-plaintext highlighter-rouge">ActiveModel::Validations</code> on steroids. You can set up all sorts of elaborate rules to validate things. And once you build up a set of validations you can share them between models, kind of like a concern. What’s most compelling to me is that the validations aren’t limited to Active Record objects – you can apply them across your app, including URL params, JSON/YAML documents, configuration, and more.</p>
+
+<h3 id="turbo-streams-meets-action-cable"><a href="https://binarysolo.chapter24.blog/turbo-streams-meets-action-cable">Turbo Streams meets Action Cable</a></h3>
+
+<p>by Ayush Newatia <a href="https://twitter.com/ayushn21">@ayushn21</a></p>
+
+<p>I’ve been thinking about adding real-time messaging to <a href="https://railsdevs.com">RailsDevs</a> for a while now. But it always feels like too much work. Confession time… I’ve never used Action Cable. 🫢</p>
+
+<p>So Ayush’s article couldn’t have come at a more perfect time! After only reading the overview section I already feel like I’m prepared to start integrating live updates to my app. “It packs in immense power with relatively little code.” – I couldn’t agree more.</p>
+
+<h2 id="️-black-friday-deals">🛍️ Black Friday deals</h2>
+
+<p>Black Friday deal season is starting! Here are some links to Ruby/Rails deals I’ve started to see pop up. Note that some of these are affiliate links.</p>
+
+<ul>
+  <li>36% off <a href="https://gorails.com/pricing">GoRails</a> with the yearly plan.</li>
+  <li>$50 off <a href="https://jumpstartrails.com/pricing">Jumpstart Pro Rails, iOS, and Android</a>.</li>
+  <li>40% off <a href="https://pragprog.com">The Pragmatic Programmers</a> books with code <code class="language-plaintext highlighter-rouge">turkeysale2022</code>.</li>
+  <li>Discounts on <a href="https://julianrubisch.gumroad.com/l/acr/bf-2022">Advanced CableReady</a> and <a href="https://julianrubisch.gumroad.com/l/srp-acr/bf-2022">StimulusReflex Patterns</a>.</li>
+  <li>40% off the <a href="https://mixandgo.com/lp/learn-hotwire?affiliate=masilotti">Learn Hotwire course</a> from Cezar Halmagean of Mix &amp; Go.</li>
+  <li>All <a href="https://pragmaticstudio.com/courses/hotwire-rails?ref=masilotti">Pragmatic Studio courses</a> are 40% off with code <code class="language-plaintext highlighter-rouge">2022SALE</code>.</li>
+</ul>
+
+<h2 id="-one-more-thing">👀 One more thing…</h2>
+
+<p>I’m kicking off a new initiative: an <strong>official RailsDevs referral program</strong>. Send me an <a href="mailto:joe@masilotti.com">email</a> or <a href="https://twitter.com/joemasilotti">DM</a> if you want to be one of the first involved! You’ll get a revenue share for each paying business you refer - including a cut of any hiring fees.</p>
+
+      </div>
+      <div class="flex justify-start items-center mt-16">
+        <img src="/assets/images/joe.jpg" class="rounded-full h-24 w-24 sm:h-32 sm:w-32">
+        <div class="flex flex-col -space-y-0.5 text-sm sm:text-base text-gray-600 ml-6">
+          <div>Thanks,</div>
+          <div>Joe Masilotti</div>
+          <a href="https://twitter.com/joemasilotti" class="font-semibold underline">@joemasilotti</a>
+          <a href="mailto:joe@masilotti.com" class="font-semibold underline">joe@masilotti.com</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        </main>
+        <footer class="mt-32 sm:px-8">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    
+      <div class="border-t border-gray-100">
+        
+
+
+
+
+
+  <div class="relative px-4 sm:px-8 lg:px-12 py-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="lg:flex lg:items-center lg:justify-between lg:space-x-4">
+        <div>
+          <h3 class="flex items-center text-base font-medium text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-none text-gray-500">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+</svg>
+            <span class="ml-3">Get my newsletter</span>
+          </h3>
+          <p class="mt-2 text-base text-gray-600 max-w-xl pr-4">Where I share my professional experiences as a Software Engineer; my athletic adventures surfer/snowboarder and my creative exploration into leathercraft...</p>
+        </div>
+        
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+    
+    <div class="relative px-4 sm:px-8 lg:px-12 border-t border-gray-100 pt-10 pb-16">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex gap-6 text-sm font-medium text-gray-800">
+            
+          </div>
+          <p class="text-sm text-gray-500">&copy; 2024 Divashen Govender. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

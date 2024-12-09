@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-full antialiased">
+  <head>
+    
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="og:locale" content="en_US">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>⚡️ Hotwire dev newsletter - March 2023 | divashen.com</title>
+
+<meta name="description" content="An update from The Rails Foundation, a new open-source project that simplifies navigation flows in Turbo Native apps, the launch of The Rails Changelog podcast, and a bunch of Hotwire tutorials and videos.">
+<meta name="canonical" href="https://divashen.com/hotwire/edition-23/">
+<meta name="author" content="Divashen Govender">
+
+<meta name="og:title" content="⚡️ Hotwire dev newsletter - March 2023 | divashen.com">
+<meta name="og:description" content="An update from The Rails Foundation, a new open-source project that simplifies navigation flows in Turbo Native apps, the launch of The Rails Changelog podcast, and a bunch of Hotwire tutorials and videos.">
+<meta name="og:image" content="https://divashen.com/assets/images/og/hotwire/23.png">
+<meta name="og:url" content="https://divashen.com/hotwire/edition-23/">
+<meta name="og:site_name" content="divashen.com">
+
+<meta name="twitter:creator" content="@divasheng">
+<meta name="twitter:site" content="@divasheng">
+<meta name="twitter:title" content="⚡️ Hotwire dev newsletter - March 2023 | divashen.com">
+<meta name="twitter:image" content="https://divashen.com/assets/images/og/hotwire/23.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="/assets/favicons/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/favicons/192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicons/180x180.png" sizes="180x180">
+
+<link type="application/atom+xml" rel="alternate" href="https://divashen.com/feed.xml" title="divashen.com" />
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
+    <script src="/assets/javascripts/toggler.js"></script>
+    
+      <script src="https://cdn.usefathom.com/script.js" data-site="QNURQQHD" defer></script>
+    
+  </head>
+  <body class="flex h-full bg-gray-50">
+    <div class="flex w-full">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-gray-100"></div>
+        </div>
+      </div>
+      <div class="relative flex w-full flex-col">
+        <header class="pointer-events-none relative z-50 flex flex-col">
+  
+
+
+
+  <div class="top-0 z-10 h-16 pt-6">
+    <div class="sm:px-8">
+      <div class="max-w-7xl mx-auto lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="max-w-2xl mx-auto lg:max-w-5xl">
+            <div class="relative flex gap-4 justify-center">
+              <div class="flex flex-1">
+                
+                  <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    <a href="/" aria-label="divashen.com" title="divashen.com" class="block pointer-events-auto">
+                      <img src="/assets/images/astro.jpg" alt="Divashen Govender" class="rounded-full bg-gray-100 object-cover h-9 w-9">
+                    </a>
+                  </div>
+                
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <div class="pointer-events-auto md:hidden">
+  <button type="button" id="menu-close-button" class="group flex items-center rounded-full bg-white/90 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="ml-3 h-auto w-3 stroke-gray-500 group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+</svg>
+  </button>
+  <div id="menu-content" class="hidden fixed inset-0 z-50 bg-gray-800/40 backdrop-blur-sm">
+    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-gray-900/5">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button type="button" id="menu-open-button" aria-label="Close menu" class="-m-1 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6 text-gray-500">
+  <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"/>
+</svg>
+        </button>
+        <h2 class="text-sm font-medium text-gray-600">
+          Navigation
+        </h2>
+      </div>
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-gray-100 text-base text-gray-800">
+          
+            <li>
+              <a href="/about/" class="block py-2">About</a>
+            </li>
+          
+            <li>
+              <a href="/articles/" class="block py-2">Articles</a>
+            </li>
+          
+            <li>
+              <a href="/newsletter/" class="block py-2">Newsletter</a>
+            </li>
+          
+            <li>
+              <a href="/" class="block py-2">\_(ツ)_/</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+                <nav class="pointer-events-auto hidden md:block">
+  <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    
+      
+      
+      <li>
+        <a href="/about/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          About
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/articles/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Articles
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/newsletter/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Newsletter
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          \_(ツ)_/
+          
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+              </div>
+              <div class="flex justify-end md:flex-1">
+                <div class="pointer-events-auto">
+                  <a href="https://wavesandcode.substack.com/feed" title="RSS" aria-label="RSS" class="block group rounded-full bg-white/90 px-3.5 py-2.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="flex-auto">
+          <div class="mt-16 sm:px-8 sm:mt-32">
+  <div class="max-w-7xl mx-auto lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="max-w-2xl mx-auto lg:max-w-5xl">
+        <div class="xl:relative">
+  <div class="mx-auto max-w-2xl">
+    <a href="/newsletter/" title="Go back to all editions" aria-label="Go back to all editions" class="hidden group mb-8 lg:flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 stroke-gray-500 transition group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+</svg>
+    </a>
+    <article>
+      <header class="flex flex-col">
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+          ⚡️ Hotwire Monthly
+          <span class="sr-only">- March 2023 edition</span>
+        </h1>
+        <time datetime="<%= resource.data.date %>" class="order-first flex items-center text-base text-gray-500">
+          <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+          <span class="ml-3">March 2023 edition</span>
+        </time>
+      </header>
+      <p class="mt-2 sm:mt-4 sm:text-lg text-gray-600">Turbo Native, Hotwire, and Ruby on Rails - weekly editions with monthly link roundups. Subscribe for exclusive content and first access to upcoming products. By <a href="/" class="underline">Joe Masilotti</a>.</p>
+      
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      <div class="prose lg:prose-lg prose-h2:mb-8 prose-h3:mb-2 mt-8">
+        <p>Welcome back to the ⚡️ Hotwire dev newsletter!</p>
+
+<p>This month we have an update from The Rails Foundation, a new open-source project that simplifies navigation flows in Turbo Native apps, and the launch of The Rails Changelog podcast. Also, a bunch of tutorials and videos to keep you up to date with the latest in Rails and Hotwire development.</p>
+
+<p>My favorites this month include Andrea’s 30 Days of Hotwire tips with a <em>ton</em> of practical use cases, Akshay’s walk through progressively enhancing a Rails app using Hotwire, and a new way to do nested forms from Deanin.</p>
+
+<p>Also, if you’re looking for some help with Turbo Native I’m running office hours today! Drop by with your questions – I’d love to help. 10am PT / 1pm ET for about an hour - <a href="https://us02web.zoom.us/meeting/register/tZUscOqhqD4qHtQnxdwZJn9QQOSy6QV8ZF0I">register here</a>.</p>
+
+<h2 id="-announcements">📣 Announcements</h2>
+
+<h3 id="what-to-expect-from-the-rails-foundation"><a href="https://www.youtube.com/watch?v=hgdp3qDXW4w&amp;t=2615s">What to expect from the Rails Foundation</a></h3>
+
+<p>by Amanda Brooke Perino <a href="https://twitter.com/AmandaBPerino">@AmandaBPerino</a></p>
+
+<p>The executive director of The Rails Foundation gave a lightning talk covering what’s coming in the next year. Documentation is going to include more beginner tutorials and will start to explore other mediums like video, a Rails user conference is being planned in Europe, and solidifying ideas to bring standard Ruby/Rails curriculum to bootcamps and higher education.</p>
+
+<p>Amanda also mentioned that her inbox is open and she is eager for feedback. If you have suggestions then <a href="mailto:amanda@rubyonrails.org">send her an email</a>!</p>
+
+<h3 id="introducing-turbo-navigator"><a href="https://github.com/joemasilotti/TurboNavigator">Introducing Turbo Navigator</a></h3>
+
+<p>by Joe Masilotti <a href="https://twitter.com/joemasilotti">@joemasilotti</a></p>
+
+<p>I launched a new open source project that handles common navigation flows in Turbo Native apps. 📱 It consolidates a lot of boilerplate I’ve built up over the years into a single, drop-in class.</p>
+
+<p>I demoed how to integrate it into a new Xcode project on <a href="https://www.youtube.com/watch?v=S_2GPcGlu50">a recent livestream</a>. I’m still looking for help battle testing this in real-world apps - if you give it a try let me know!</p>
+
+<h3 id="the-rails-changelog-podcast"><a href="https://www.railschangelog.com">The Rails Changelog podcast</a></h3>
+
+<p>by Emmanuel Hayford <a href="https://twitter.com/siaw23">@siaw23</a></p>
+
+<p>Emmanuel, the co-editor of the <a href="https://world.hey.com/this.week.in.rails">This Week in Rails</a> newsletter, launched a new podcast for recent changes to the Rails framework. This pilot episode covers the motivation for the podcast and how the name came about. Also, 2 full minutes of horns in the outro tune! 🎺</p>
+
+<h2 id="-tutorials">👩‍🎓 Tutorials</h2>
+
+<h3 id="30-days-of-hotwire-tips"><a href="https://mobile.twitter.com/ilrock__/status/1631315562390519809">30 Days of Hotwire tips</a></h3>
+
+<p>by Andrea <a href="https://mobile.twitter.com/ilrock__">@ilrock__</a></p>
+
+<p>This thread from Andrea is a goldmine of Hotwire tips! Modals without JavaScript, multi select input fields, infinite scrolling, dynamic nested forms… even real-time chat! Check this out if you want to be inspired on how to integrate Hotwire into your Rails app.</p>
+
+<h3 id="progressive-application-development-with-hotwire"><a href="https://www.akshaykhot.com/progressive-application-development-with-hotwire/">Progressive Application Development with Hotwire</a></h3>
+
+<p>by Akshay Khot</p>
+
+<p>A monster 4000+ word article to get you to fall in love with Hotwire. If for some reason you hadn’t already! 😆</p>
+
+<p>Akshay walks through how to add dynamic Hotwire features to a simple counter. It starts off with a full page reload and slowly gets progressively enhanced with Turbo Drive, Frames, and then Streams.</p>
+
+<p>I think the mindset of this article is the most important take-away: “How can we start from the absolute baseline? and then progressively enhance your application one step at a time.”</p>
+
+<h3 id="search-and-select-multiple-with-rails-and-hotwire"><a href="https://purpleriver.dev/posts/2023/search-and-select-hotwire">Search and Select Multiple with Rails and Hotwire</a></h3>
+
+<p>by Phil Reynolds <a href="https://twitter.com/PurpleRiver_Dev">@PurpleRiver_Dev</a></p>
+
+<p><code class="language-plaintext highlighter-rouge">pg_search</code> + <code class="language-plaintext highlighter-rouge">pagy</code> + a Turbo Frame + Stimulus = ❤️</p>
+
+<p>Phil walks through building a form where folks can search for and select multiple users. Search and pagination are outsourced to <code class="language-plaintext highlighter-rouge">pg_search</code> and <code class="language-plaintext highlighter-rouge">pagy</code> and the UI is powered by a single Turbo Frame.</p>
+
+<p>There is a fair amount of Stimulus code to get the stylings working. I wonder if this could be improved with a second Turbo Frame? 🤔  <a href="https://twitter.com/PurpleRiver_Dev">Let Phil know</a> if you have any ideas!</p>
+
+<h3 id="using-viewcomponents-with-turbo"><a href="https://predicatemethod.com/posts/using-viewcomponents-with-turbo/">Using ViewComponents with Turbo</a></h3>
+
+<p>by Jason York</p>
+
+<p>If your View Component has a <code class="language-plaintext highlighter-rouge">turbo_frame</code> how can you update it with new data from the server? Jason answers this question with <code class="language-plaintext highlighter-rouge">tag.turbo_frame</code> to get around a known issue and a bit of boilerplate in the model to broadcast the stream correctly.</p>
+
+<h2 id="-videos">🎥 Videos</h2>
+
+<h3 id="stimulus-nested-forms"><a href="https://www.youtube.com/watch?v=7JNRZLTRDCc">Stimulus Nested Forms</a></h3>
+
+<p>by Deanin <a href="https://twitter.com/Deaniocom">@Deaniocom</a></p>
+
+<p>I usually reach for <a href="https://github.com/nathanvda/cocoon">cocoon</a> when I need nested forms in Rails but I think this video has convinced me otherwise! With <a href="https://www.stimulus-components.com/docs/stimulus-rails-nested-form/">a Stimulus Component</a> we can remove our dependency on jQuery and build something that feels a bit more at home in a Hotwire app. 💪</p>
+
+<h3 id="auto-submitting-forms--custom-turbo-stream-actions"><a href="https://gorails.com/episodes/custom-turbo-stream-actions-and-auto-submitting-forms">Auto-submitting Forms &amp; Custom Turbo Stream Actions</a></h3>
+
+<p>by Chris Oliver <a href="https://twitter.com/excid3">@excid3</a></p>
+
+<p>In the latest free video from GoRails, Chris builds a form that automatically submits when a select box is changed… with inline JavaScript! 😱 I like the pragmatism of this approach. Why bring in an entire Stimulus controller if we already have the hook we need from barebones HTML?</p>
+
+<p>The form is then enhanced with a flash success message that hides after 2 seconds - powered by a custom Turbo Stream.</p>
+
+<h3 id="kredis-live-counter-http-vs-websocket-turbo-broadcasts"><a href="https://www.youtube.com/watch?v=hWzBy4eA8Ww">Kredis Live counter, HTTP vs Websocket Turbo Broadcasts</a></h3>
+
+<p>by Yaroslav Shmarov <a href="https://twitter.com/yarotheslav">@yarotheslav</a></p>
+
+<p><a href="https://github.com/rails/kredis">Kredis</a> abstract lower level Redis commands with more a Ruby-like syntax and API. Here, Yaroslav uses a <code class="language-plaintext highlighter-rouge">counter</code> to manipulate an integer persisted to Redis. The video walks through how to install and manipulate Kredis before displaying it in the UI. Finally, everything is wrapped up with a Turbo Broadcast for real-time updates.</p>
+
+      </div>
+      <div class="flex justify-start items-center mt-16">
+        <img src="/assets/images/joe.jpg" class="rounded-full h-24 w-24 sm:h-32 sm:w-32">
+        <div class="flex flex-col -space-y-0.5 text-sm sm:text-base text-gray-600 ml-6">
+          <div>Thanks,</div>
+          <div>Joe Masilotti</div>
+          <a href="https://twitter.com/joemasilotti" class="font-semibold underline">@joemasilotti</a>
+          <a href="mailto:joe@masilotti.com" class="font-semibold underline">joe@masilotti.com</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        </main>
+        <footer class="mt-32 sm:px-8">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    
+      <div class="border-t border-gray-100">
+        
+
+
+
+
+
+  <div class="relative px-4 sm:px-8 lg:px-12 py-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="lg:flex lg:items-center lg:justify-between lg:space-x-4">
+        <div>
+          <h3 class="flex items-center text-base font-medium text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-none text-gray-500">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+</svg>
+            <span class="ml-3">Get my newsletter</span>
+          </h3>
+          <p class="mt-2 text-base text-gray-600 max-w-xl pr-4">Where I share my professional experiences as a Software Engineer; my athletic adventures surfer/snowboarder and my creative exploration into leathercraft...</p>
+        </div>
+        
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+    
+    <div class="relative px-4 sm:px-8 lg:px-12 border-t border-gray-100 pt-10 pb-16">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex gap-6 text-sm font-medium text-gray-800">
+            
+          </div>
+          <p class="text-sm text-gray-500">&copy; 2024 Divashen Govender. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-full antialiased">
+  <head>
+    
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="og:locale" content="en_US">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>⚡️ Hotwire dev newsletter - November 2021 | divashen.com</title>
+
+<meta name="description" content="A podcast with Basecamp's lead Android developer, Hotwire-powered open source projects, and tutorials on modal forms, "like" counts, slow forms, and more.">
+<meta name="canonical" href="https://divashen.com/hotwire/edition-6/">
+<meta name="author" content="Divashen Govender">
+
+<meta name="og:title" content="⚡️ Hotwire dev newsletter - November 2021 | divashen.com">
+<meta name="og:description" content="A podcast with Basecamp's lead Android developer, Hotwire-powered open source projects, and tutorials on modal forms, "like" counts, slow forms, and more.">
+<meta name="og:image" content="https://divashen.com/assets/images/og/hotwire/6.png">
+<meta name="og:url" content="https://divashen.com/hotwire/edition-6/">
+<meta name="og:site_name" content="divashen.com">
+
+<meta name="twitter:creator" content="@divasheng">
+<meta name="twitter:site" content="@divasheng">
+<meta name="twitter:title" content="⚡️ Hotwire dev newsletter - November 2021 | divashen.com">
+<meta name="twitter:image" content="https://divashen.com/assets/images/og/hotwire/6.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="/assets/favicons/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/assets/favicons/192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/favicons/180x180.png" sizes="180x180">
+
+<link type="application/atom+xml" rel="alternate" href="https://divashen.com/feed.xml" title="divashen.com" />
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
+    <script src="/assets/javascripts/toggler.js"></script>
+    
+      <script src="https://cdn.usefathom.com/script.js" data-site="QNURQQHD" defer></script>
+    
+  </head>
+  <body class="flex h-full bg-gray-50">
+    <div class="flex w-full">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-gray-100"></div>
+        </div>
+      </div>
+      <div class="relative flex w-full flex-col">
+        <header class="pointer-events-none relative z-50 flex flex-col">
+  
+
+
+
+  <div class="top-0 z-10 h-16 pt-6">
+    <div class="sm:px-8">
+      <div class="max-w-7xl mx-auto lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="max-w-2xl mx-auto lg:max-w-5xl">
+            <div class="relative flex gap-4 justify-center">
+              <div class="flex flex-1">
+                
+                  <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    <a href="/" aria-label="divashen.com" title="divashen.com" class="block pointer-events-auto">
+                      <img src="/assets/images/astro.jpg" alt="Divashen Govender" class="rounded-full bg-gray-100 object-cover h-9 w-9">
+                    </a>
+                  </div>
+                
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <div class="pointer-events-auto md:hidden">
+  <button type="button" id="menu-close-button" class="group flex items-center rounded-full bg-white/90 px-4 py-2.5 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="ml-3 h-auto w-3 stroke-gray-500 group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+</svg>
+  </button>
+  <div id="menu-content" class="hidden fixed inset-0 z-50 bg-gray-800/40 backdrop-blur-sm">
+    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-gray-900/5">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button type="button" id="menu-open-button" aria-label="Close menu" class="-m-1 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6 text-gray-500">
+  <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"/>
+</svg>
+        </button>
+        <h2 class="text-sm font-medium text-gray-600">
+          Navigation
+        </h2>
+      </div>
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-gray-100 text-base text-gray-800">
+          
+            <li>
+              <a href="/about/" class="block py-2">About</a>
+            </li>
+          
+            <li>
+              <a href="/articles/" class="block py-2">Articles</a>
+            </li>
+          
+            <li>
+              <a href="/newsletter/" class="block py-2">Newsletter</a>
+            </li>
+          
+            <li>
+              <a href="/" class="block py-2">\_(ツ)_/</a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+                <nav class="pointer-events-auto hidden md:block">
+  <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-gray-800 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+    
+      
+      
+      <li>
+        <a href="/about/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          About
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/articles/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Articles
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/newsletter/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          Newsletter
+          
+        </a>
+      </li>
+    
+      
+      
+      <li>
+        <a href="/" class="relative block px-3 py-2.5 transition  hover:text-primary-600 ">
+          \_(ツ)_/
+          
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+              </div>
+              <div class="flex justify-end md:flex-1">
+                <div class="pointer-events-auto">
+                  <a href="https://wavesandcode.substack.com/feed" title="RSS" aria-label="RSS" class="block group rounded-full bg-white/90 px-3.5 py-2.5 shadow-lg shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur">
+                    
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="flex-auto">
+          <div class="mt-16 sm:px-8 sm:mt-32">
+  <div class="max-w-7xl mx-auto lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="max-w-2xl mx-auto lg:max-w-5xl">
+        <div class="xl:relative">
+  <div class="mx-auto max-w-2xl">
+    <a href="/newsletter/" title="Go back to all editions" aria-label="Go back to all editions" class="hidden group mb-8 lg:flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3 stroke-gray-500 transition group-hover:stroke-gray-700">
+  <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+</svg>
+    </a>
+    <article>
+      <header class="flex flex-col">
+        <h1 class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+          ⚡️ Hotwire Monthly
+          <span class="sr-only">- November 2021 edition</span>
+        </h1>
+        <time datetime="<%= resource.data.date %>" class="order-first flex items-center text-base text-gray-500">
+          <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+          <span class="ml-3">November 2021 edition</span>
+        </time>
+      </header>
+      <p class="mt-2 sm:mt-4 sm:text-lg text-gray-600">Turbo Native, Hotwire, and Ruby on Rails - weekly editions with monthly link roundups. Subscribe for exclusive content and first access to upcoming products. By <a href="/" class="underline">Joe Masilotti</a>.</p>
+      
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      <div class="prose lg:prose-lg prose-h2:mb-8 prose-h3:mb-2 mt-8">
+        <p>Welcome back to the ⚡️ Hotwire dev newsletter! This month we have a podcast with Basecamp’s lead Android developer, a few Hotwire-powered open source projects, and tons of tutorials. In Turbo news, <a href="https://github.com/hotwired/turbo/releases/tag/v7.1.0-rc.1">v7.1.0 saw three separate release candidates</a>, which now replicates all of <code class="language-plaintext highlighter-rouge">rails-ujs</code> functionality. This includes confirmation dialogs, disabling forms on submit, and more.</p>
+
+<p>I’m also excited to announce that <a href="https://railsdevs.com">RailsDevs</a> is officially live! A “reverse job board” for Rails devs that strives to give power back to the independent developer. Instead of companies posting their jobs, developers post their profiles. The site is powered by Rails and <a href="https://github.com/joemasilotti/railsdevs.com/">open source</a> – I’d love if you could add your developer profile or contribute some code.</p>
+
+<h2 id="-podcasts-and-videos">🎙📹 Podcasts and videos</h2>
+
+<h3 id="turbo-native-for-android-and-hotwire-with-jay-ohms"><a href="https://fragmentedpodcast.com/episodes/220/">Turbo Native for Android and Hotwire with Jay Ohms</a></h3>
+
+<p>by Donn Felker <a href="https://twitter.com/donnfelker">@donnfelker</a></p>
+
+<p>Jay Ohms, the lead Android dev at Basecamp, gives an overview of how Turbo Native works on Android. There’s also a great teaser of what Hotwire’s Strada will be when it’s released around the 37 minute mark.</p>
+
+<h3 id="turbo-native-blog"><a href="https://youtube.com/playlist?list=PLA_JgdjJGBdX_J8mGTaTz9G65-rDs52a2">Turbo Native Blog</a></h3>
+
+<p>by Jonathan Bennett</p>
+
+<p>A 6-part video series on building hybrid apps on iOS with Turbo Native. Jonathan covers setting the iOS and Rails apps, authentication, the JavaScript Bridge, and more.</p>
+
+<h2 id="-open-source">🐙 Open source</h2>
+
+<h3 id="hotwirelivereload"><a href="https://github.com/kirillplatonov/hotwire-livereload">Hotwire::Livereload</a></h3>
+
+<p>by irill Platonov <a href="https://twitter.com/kirplatonov">@kirplatonov</a></p>
+
+<p>Automatically reload the page when “view” files are modified, like HTML, CSS, helpers, and JavaScript. Can also be configured to listen to any path, like view components.</p>
+
+<h3 id="bridgtown-fundraising"><a href="https://fundraising.bridgetownrb.com/">Bridgtown Fundraising</a></h3>
+
+<p>by ared White <a href="https://twitter.com/jaredcwhite">@jaredcwhite</a></p>
+
+<p>Bridgetown, a Webpack-aware, Ruby-powered static site generator, is looking for donations and sponsors to help fund future development.</p>
+
+<h3 id="avo-admin-framework"><a href="https://avohq.io/">Avo admin framework</a></h3>
+
+<p>by drian Marin <a href="https://twitter.com/adrianthedev">@adrianthedev</a></p>
+
+<p>Configuration-based, no-maintenance, extendable Ruby on Rails admin framework powered by Hotwire.</p>
+
+<h2 id="-tutorials">🎓 Tutorials</h2>
+
+<h3 id="github-issue-style-file-uploader-using-stimulus-and-active"><a href="https://hybrd.co/posts/github-issue-style-file-uploader-using-stimulus-and-active-storage">GitHub Issue-style File Uploader Using Stimulus and Active</a></h3>
+
+<p>by eremy Smith <a href="https://twitter.com/jeremysmithco">@jeremysmithco</a></p>
+
+<p>A no nonsense blog post on adding drag-and-drop file uploads to a text field. Jeremy starts with the solution, a beefy Stimulus controller, then dives into how it works and how to wire it up to your view.</p>
+
+<h3 id="handling-modal-forms-with-rails-tailwind-css-and-hotwire"><a href="https://bramjetten.dev/articles/search-modal-with-hotwire-part-1">Handling modal forms with Rails, Tailwind CSS, and Hotwire</a></h3>
+
+<p>by ram Jetten <a href="https://twitter.com/BramJetten">@BramJetten</a></p>
+
+<p>Not just modals, but forms inside of said modals. Extends the modal controller from TailwindCSS Stimulus Components to hook into success and failure callbacks to clear errors.</p>
+
+<h3 id="turbo-training"><a href="https://turbo-showcase.herokuapp.com/training">Turbo Training</a></h3>
+
+<p>by lessandro Rodi <a href="https://twitter.com/coorasse">@coorasse</a></p>
+
+<p>Practice your Turbo skills with this Turbo training page. Five exercises that get progressively more difficult, ranging from replacing the content of a Turbo Frame to submitting a form without refreshing the page.</p>
+
+<h3 id="increment-likes-count-without-any-page-refreshes"><a href="https://blog.corsego.com/hotwire-turbo-button-to-like-record">Increment likes count without any page refreshes</a></h3>
+
+<p>by aroslav Shmarov <a href="https://twitter.com/yarotheslav">@yarotheslav</a></p>
+
+<p>A compact tutorial on on implementing Twitter or Facebook “likes” with Turbo. The count is persisted in the database and Turbo powers the reloading of the partial.</p>
+
+<h3 id="enriching-slow-rails-forms-with-turbo-frames"><a href="https://paagman.dev/enriching-slow-rails-forms-with-turbo-frames/">Enriching slow Rails forms with Turbo Frames</a></h3>
+
+<p>by ennis Paagman <a href="https://twitter.com/djfpaagman">@djfpaagman</a></p>
+
+<p>A Turbo-powered approach to showing a “loading” screen when submitting a form that takes a while to load. Dennis also touches on disabling the form with a Stimulus controller (if you aren’t using the latest RC of Turbo).</p>
+
+<h2 id="-jobs">👩‍💻👨‍💻 Jobs</h2>
+
+<h3 id="hire-kaleb-lape"><a href="mailto:kaleb@rails.quest">Hire Kaleb Lape</a></h3>
+
+<p>Hooked on coding with Windows 95 and QBasic, I found my way to Ruby on Rails in 2015 and never looked back. Now I build software, consult, and refine raw talent at Rails Quest.</p>
+
+<h3 id="hire-feti-jashari"><a href="mailto:fetijashari@gmail.com">Hire Feti Jashari</a></h3>
+
+<p>Rails Developer specializing in SaaS Apps, ERPs, CRMs, APIs including Payments, Analytics etc. Expert on Jumpstart Rails Hatchbox.</p>
+
+<h2 id="and-finally">And finally…</h2>
+
+<p>Remember that time that DHH said he was <a href="https://twitter.com/dhh/status/1453759777163694090?s=20">enjoying this newsletter</a>? 🤯</p>
+
+      </div>
+      <div class="flex justify-start items-center mt-16">
+        <img src="/assets/images/joe.jpg" class="rounded-full h-24 w-24 sm:h-32 sm:w-32">
+        <div class="flex flex-col -space-y-0.5 text-sm sm:text-base text-gray-600 ml-6">
+          <div>Thanks,</div>
+          <div>Joe Masilotti</div>
+          <a href="https://twitter.com/joemasilotti" class="font-semibold underline">@joemasilotti</a>
+          <a href="mailto:joe@masilotti.com" class="font-semibold underline">joe@masilotti.com</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        </main>
+        <footer class="mt-32 sm:px-8">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    
+      <div class="border-t border-gray-100">
+        
+
+
+
+
+
+  <div class="relative px-4 sm:px-8 lg:px-12 py-12">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+      <div class="lg:flex lg:items-center lg:justify-between lg:space-x-4">
+        <div>
+          <h3 class="flex items-center text-base font-medium text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 flex-none text-gray-500">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+</svg>
+            <span class="ml-3">Get my newsletter</span>
+          </h3>
+          <p class="mt-2 text-base text-gray-600 max-w-xl pr-4">Where I share my professional experiences as a Software Engineer; my athletic adventures surfer/snowboarder and my creative exploration into leathercraft...</p>
+        </div>
+        
+
+<form action="https://buttondown.email/api/emails/embed-subscribe/joemasilotti" method="post" onsubmit="window.open('https://buttondown.email/joemasilotti', 'popupwindow')" class="not-prose flex mt-6">
+  <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-gray-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-gray-800/5 placeholder:text-gray-500 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+  
+  <button type="submit" class="button button-primary ml-4 flex-none">Subscribe</button>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+    
+    <div class="relative px-4 sm:px-8 lg:px-12 border-t border-gray-100 pt-10 pb-16">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <div class="flex gap-6 text-sm font-medium text-gray-800">
+            
+          </div>
+          <p class="text-sm text-gray-500">&copy; 2024 Divashen Govender. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>
