@@ -1,6 +1,7 @@
-# Masilotti.com, built with Jekyll
+# Divashen.com, built with Jekyll
 
-This repo holds the code for [Masilotti.com](https://masilotti.com).
+[![Deployment](https://github.com/DivashenG/divashen.com/actions/workflows/jekyll.yml/badge.svg)](https://github.com/DivashenG/divashen.com/actions/workflows/jekyll.yml)
+
 
 ## Requirements
 
